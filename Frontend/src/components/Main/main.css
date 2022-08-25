@@ -1,0 +1,16 @@
+.main-parent{
+    margin:68px 90px 86px 107px;
+    border:1px solid grey;
+    width: 100%;
+}
+.main-header{
+    font-size: 48px;
+    font-weight: 500;    
+}
+.user-name{
+    color: #ff0101
+}
+.objectif-result{
+    font-size: 18px;
+    margin-top:41px;
+}

@@ -1,6 +1,5 @@
 .main-parent{
     margin:68px 90px 86px 107px;
-    border:1px solid grey;
     width: 100%;
 }
 .main-header{
@@ -12,5 +11,10 @@
 }
 .objectif-result{
     font-size: 18px;
-    margin-top:41px;
+    margin-top: 41px;
+}
+.graphs-cards-row {
+    margin-top: 77px;
+    display:grid;
+    grid-template-columns: 85% 15%;
 }

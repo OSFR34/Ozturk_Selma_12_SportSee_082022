@@ -153,31 +153,31 @@ const USER_AVERAGE_SESSIONS = [
         userId: 18,
         sessions: [
             {
-                day: 1,
+                day:"L",
                 sessionLength: 30
             },
             {
-                day: 2,
+                day:"M",
                 sessionLength: 40
             },
             {
-                day: 3,
+                day:"M",
                 sessionLength: 50
             },
             {
-                day: 4,
+                day:"J",
                 sessionLength: 30
             },
             {
-                day: 5,
+                day:"V",
                 sessionLength: 30
             },
             {
-                day: 6,
+                day:"S",
                 sessionLength: 50
             },
             {
-                day: 7,
+                day:"D",
                 sessionLength: 50
             }
         ]

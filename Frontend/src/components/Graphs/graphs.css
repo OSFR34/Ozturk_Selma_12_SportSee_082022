@@ -1,1 +1,36 @@
+.recharts-default-legend{
+    padding-right:100px!important;
+    padding-top:23px!important;
+}
+.recharts-legend-wrapper{
+    padding-bottom:65px!important;
+}
+.recharts-legend-item.legend-item-0{
+    margin-right: 32px!important;
+}
 
+.recharts-legend-item-text{
+    margin-left: 10px;
+}
+.aktivite-grafigi{
+    position: relative;
+}
+.activity-title{
+   position:absolute;
+   top:32px;
+   left:32px;
+   z-index:9999;
+   font-size: 15px;
+   color: rgba(32, 37, 58, 1);
+   font-weight: bold;
+
+}
+
+.recharts-layer.recharts-bar-rectangle{
+    border-radius: 3px 3px 0px 0px;
+}
+.three-graphs{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

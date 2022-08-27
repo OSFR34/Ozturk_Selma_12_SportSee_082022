@@ -7,7 +7,9 @@ export default function Main(props) {
 
   const gelenUserInfoPropu = props.userInfoProp
   const gelenUserActivityPropu = props.activityDataProp
-  const gelenUserSessionsPropu = props.userSessionsProp
+  const gelenUserSessionsPropu = props.sessionsProp
+  const gelenUserPerformancePropu = props.performanceProp
+  
 
   const [userScore, setUserScore] = useState(false)
   const [userMessage, setUserMessage] = useState(false)
@@ -34,7 +36,7 @@ export default function Main(props) {
           }          
         </div>   
         <div className='graphs-cards-row'>
-          <Graphs activity={gelenUserActivityPropu} sessions={gelenUserSessionsPropu} />
+          <Graphs activity={gelenUserActivityPropu} sessions={gelenUserSessionsPropu} performance = {gelenUserPerformancePropu}/>
           <Cards />
           
         </div>  

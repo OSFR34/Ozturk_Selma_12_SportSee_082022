@@ -1,0 +1,11 @@
+.Line-parent {
+    background-color: #ff0000;
+}
+.line-chart-tiltle{
+    color: white;
+    font-size: 15px;
+    width: 147px;
+    margin-left: 34px;
+    margin-top: 29px;
+    opacity: 0.5;
+}

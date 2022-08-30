@@ -14,7 +14,7 @@ const {
     handleNoUserData
 } = require('./middleware')
 
-
+// identification des routes
 router.get('/user/:id', (req, res) => {
     const userId = idx(req, _ => _.params.id)
     const userData = getUserById(Number(userId))

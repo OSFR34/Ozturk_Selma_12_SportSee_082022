@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.tree-cards {
+.protein-card{
     height:124px;
     width:258px;
     margin:60px 0 0 31px;
@@ -21,8 +21,33 @@
     align-items:center;
     justify-content:center;
 }
-.tree-card-body{
+.protein-card-body{
     display:flex;
     align-items: center;
 }
-
+.glucide-card{
+    height:124px;
+    width:258px;
+    margin:60px 0 0 31px;
+    background-color:#fbfbfb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.glucide-card-body{
+    display:flex;
+    align-items: center;
+}
+.lipid-card{
+    height:124px;
+    width:258px;
+    margin:60px 0 0 31px;
+    background-color:#fbfbfb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.lipid-card-body{
+    display:flex;
+    align-items: center;
+}

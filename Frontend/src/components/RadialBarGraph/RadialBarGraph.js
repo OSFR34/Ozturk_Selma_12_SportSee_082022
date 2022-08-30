@@ -66,10 +66,11 @@ export default function RadialBarGraph(props) {
         </span>
         
       </p>
+      {/* innerRadius=rayon intérieur; startAngle=Angle de départ; insideStart=commencez à l'intérieur */}
       <RadialBarChart
         width={258}
         height={328}
-        innerRadius="100%"
+        innerRadius="100%" 
         outerRadius="0%"
         data={data}
         startAngle={0}

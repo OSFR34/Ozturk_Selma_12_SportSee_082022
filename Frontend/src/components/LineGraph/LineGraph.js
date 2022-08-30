@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import './lineGraph.css'
-import {LineChart,CartesianGrid,XAxis,YAxis,Tooltip,Legend,Line} from 'recharts'
+// j'importe les composants de Recharts (ex LineChart, Xaxis, ...)
+import {LineChart,XAxis,Tooltip,Line} from 'recharts'
 
 
 export default function LineGraph(props) {
 
   const gelenUserSessionsPropu = props.sessions;
 
-  
+  /**@function reFormatSessionData
+   * @param {array} sessionData
+   * @return {void} - Nothing
+   */
   const reFormatSessionData = (sessionData) => {
     sessionData.map(item => {
       switch(item.day){
@@ -47,9 +51,14 @@ export default function LineGraph(props) {
     <div style= {{ marginTop:"30px" }} className="line-parent">
       <p className='line-chart-title'>Durée moyenne des sessions</p>
         <LineChart width={258} height={263} data={gelenUserSessionsPropu} >
+              {/* axe des abscisses(x) */}
               <XAxis dataKey="day" axisLine = {{ stroke:"white" }} stroke="white" style={{ opacity:'0.5',fontWeight:'bold' }} />
+              {/* Tooltip=info bulle */}
               <Tooltip labelStyle={{ display:'none' }} />
-              <Line style={{ stroke:"white" }} type="monotone" dataKey="sessionLength" strokeWidth={2}  activeDot={{ stroke:"white", strokeWidth:'2' , r:5, fill:"white" }}  />
+              {/* stroke= couleur; fil= background; strokeWidth= épaisseur de la ligne; activeDot=background de l'info-bulle */}
+              <Line style={{ stroke:"white" }} type="monotone" dataKey="sessionLength" strokeWidth={2}  
+              // r=radius; fill= background
+              activeDot={{ stroke:"white", strokeWidth:'2' , r:5, fill:"white" }}  />
         </LineChart>
     </div>
   )

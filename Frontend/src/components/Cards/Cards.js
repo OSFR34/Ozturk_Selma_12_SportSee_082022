@@ -1,5 +1,5 @@
 import React from 'react'
-import './card.css'
+import './cards.css'
 import caloryIcon from '../../images/calories-icon.svg'
 import proteinIcon from '../../images/protein-icon.svg'
 import glucideIcon from '../../images/carbs-icon.svg'

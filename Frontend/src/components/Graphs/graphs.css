@@ -25,12 +25,12 @@
    font-weight: bold;
 
 }
-
 .recharts-layer.recharts-bar-rectangle{
     border-radius: 3px 3px 0px 0px;
 }
 .three-graphs{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    
 }

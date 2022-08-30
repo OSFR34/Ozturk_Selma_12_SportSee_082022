@@ -1,17 +1,15 @@
-.horizontal-nav-parent {
+.horizontal-nav-parent{
     height:91px;
     background: #020203;
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 90px 0 30px;
-    color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+    padding:0 90px 0 30px;
+    color:white;
 }
-.accueil-link, .profil-link, .communaute-link,.reglage-link {
+.accueil-link,.profil-link, .reglage-link, .communaute-link{
     font-weight: 500;
     font-style: normal;
-    font-size: 20px;
+    font-size:20px;
     line-height: 20px;
 }

@@ -1,29 +1,30 @@
-import React, {useState, useEffect} from 'react'
-import{BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar} from 'recharts'
+import React,{useState,useEffect} from 'react'
+
 import axios from 'axios'
+import './graphs.css'
 import BarGraph from '../BarGraph/BarGraph'
 import LineGraph from '../LineGraph/LineGraph'
-import RadialGraph from '../RadialBarGraph/RadialGraph'
 import RadarGraph from '../RadarGraph/RadarGraph'
-import './graphs.css'
-
+import RadialBarGraph from '../RadialBarGraph/RadialBarGraph'
 
 export default function Graphs(props) {
 
-const gelenAktivityPropu = props.activity
-const gelenUserSessionsPropu = props.sessions
-const gelenUserPerformancePropu = props.performance
+    const gelenAktivitePropu = props.activity   
+    const gelenUserSessionsPropu = props.sessions
+    const gelenUserPerformancePropu = props.performance
+    const gelenUserScorePropu = props.score
+
+
   return (
     <div>
-        <div className='activity-graph'>       
-           <BarGraph activity={gelenAktivityPropu} />
+        <div className='aktivite-grafigi'>
+            <BarGraph aktiviteProp = {gelenAktivitePropu} />
         </div>
-        <div className= 'three-graphs'>
-          <LineGraph sessions = {gelenUserSessionsPropu}/>
-          {/* j'ai rajouté un s à la fin de performance pour ne pas confondre avec de la ligne 15, il est tout de même possible de choisir le même nom. cette différence permet de ne plus se poserla question d'où vient le mot performance*/}
-          <RadarGraph performances = {gelenUserPerformancePropu} />
-          < RadialBarGraph/>
-        </div>          
+        <div className='three-graphs'>
+            <LineGraph  sessions = {gelenUserSessionsPropu}  />
+            <RadarGraph performances = {gelenUserPerformancePropu} />
+            <RadialBarGraph score  = {gelenUserScorePropu} />
+        </div>
     </div>
   )
 }

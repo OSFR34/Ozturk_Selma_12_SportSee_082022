@@ -1,0 +1,38 @@
+.radial-chart-parent{
+    background:#fbfbfb;
+    margin-top: 30px;
+    border-radius: 5px;
+    color:white!important;
+    margin-left:30px;
+    position:relative;
+}
+.recharts-sector.recharts-radial-bar-background-sector{
+    fill:#ddd;
+}
+.radial-title{
+    position:absolute;
+    top:24px;
+    left:30px;
+    z-index:4;
+    font-size:24px;
+    color:#20253A!important;
+    font-weight: bold;
+}
+.radial-description{
+    position:absolute;
+    top:35%;
+    left:40%;
+    z-index:4;
+    width:95px;
+    color:#20253A!important;
+    text-align: center;
+}
+.radial-description div{
+    font-size:28px;
+    color:#282D30;
+    font-weight: bold;
+}
+.description-text{
+    font-size:24px;
+    color:#74798C;
+}

@@ -1,20 +1,20 @@
 .main-parent{
     margin:68px 90px 86px 107px;
-    width: 100%;
+    width:100%;
 }
 .main-header{
     font-size: 48px;
-    font-weight: 500;    
+    font-weight: 600;
 }
 .user-name{
-    color: #ff0101
+    color:#ff0101;
 }
-.objectif-result{
-    font-size: 18px;
-    margin-top: 41px;
+.objective-result{
+    font-size:18px;
+    margin-top:41px;
 }
-.graphs-cards-row {
-    margin-top: 77px;
+.graphs-cards-row{
+    margin-top:77px;
     display:grid;
-    grid-template-columns: 85% 15%;
+    grid-template-columns:70% 30%;
 }

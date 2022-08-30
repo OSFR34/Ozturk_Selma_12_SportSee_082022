@@ -21,7 +21,7 @@ const USER_MAIN_DATA = [
             lastName: 'Ratorez',
             age: 34,
         },
-        score: 0.3,
+        todayScore: 0.3,
         keyData: {
             calorieCount: 2500,
             proteinCount: 90,
@@ -75,37 +75,43 @@ const USER_ACTIVITY = [
     {
         userId: 18,
         sessions: [
-            {
+            {   
+                id:1,
                 day: '2020-07-01',
                 kilogram: 70,
                 calories: 240
             },
-            {
+            {   id:2,
                 day: '2020-07-02',
                 kilogram: 69,
                 calories: 220
             },
             {
+                id:3,
                 day: '2020-07-03',
                 kilogram: 70,
                 calories: 280
             },
             {
+                id:4,
                 day: '2020-07-04',
                 kilogram: 70,
                 calories: 500
             },
             {
+                id:5,
                 day: '2020-07-05',
                 kilogram: 69,
                 calories: 160
             },
             {
+                id:6,
                 day: '2020-07-06',
                 kilogram: 69,
                 calories: 162
             },
             {
+                id:7,
                 day: '2020-07-07',
                 kilogram: 69,
                 calories: 390
@@ -153,31 +159,31 @@ const USER_AVERAGE_SESSIONS = [
         userId: 18,
         sessions: [
             {
-                day:"L",
+                day: 1,
                 sessionLength: 30
             },
             {
-                day:"M",
+                day: 2,
                 sessionLength: 40
             },
             {
-                day:"M",
+                day: 3,
                 sessionLength: 50
             },
             {
-                day:"J",
+                day: 4,
                 sessionLength: 30
             },
             {
-                day:"V",
+                day: 5,
                 sessionLength: 30
             },
             {
-                day:"S",
+                day: 6,
                 sessionLength: 50
             },
             {
-                day:"D",
+                day: 7,
                 sessionLength: 50
             }
         ]

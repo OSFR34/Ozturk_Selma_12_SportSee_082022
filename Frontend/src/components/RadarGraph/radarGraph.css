@@ -1,0 +1,15 @@
+.recharts-text.recharts-polar-angle-axis-tick-value{
+    text-transform: capitalize;
+    stroke:white;
+    fill:white;
+    font-size:12px;
+}
+
+.radar-chart-parent{
+    background:#282D30;
+    margin-top: 30px;
+    border-radius: 5px;
+    color:white!important;
+    margin-left:30px;
+    padding:5px;
+}

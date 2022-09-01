@@ -23,9 +23,7 @@
     "doc": "jsdoc -c jsdoc.config.json"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app/jest"
-    ]
+    "extends": [ ]
   },
   "browserslist": {
     "production": [

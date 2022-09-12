@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import Cards from '../Cards/Cards';
 import Graphs from '../Graphs/Graphs';
 import './main.css'
+import PropTypes from 'prop-types'
 
 export default function Main(props) {
 
@@ -45,4 +46,12 @@ export default function Main(props) {
 
     </div>
   )
+}
+
+Main.propTypes = {
+  activity:PropTypes.object,
+  sessions:PropTypes.object,
+  performance:PropTypes.object,
+  score:PropTypes.object,
+  cards:PropTypes.object
 }

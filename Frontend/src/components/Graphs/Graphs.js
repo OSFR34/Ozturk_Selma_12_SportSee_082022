@@ -6,6 +6,7 @@ import BarGraph from '../BarGraph/BarGraph'
 import LineGraph from '../LineGraph/LineGraph'
 import RadarGraph from '../RadarGraph/RadarGraph'
 import RadialBarGraph from '../RadialBarGraph/RadialBarGraph'
+import PropTypes from 'prop-types'
 
 export default function Graphs(props) {
 
@@ -27,4 +28,11 @@ export default function Graphs(props) {
         </div>
     </div>
   )
+}
+
+Graphs.propTypes = {
+  aktiviteProp: PropTypes.object,
+  sessions: PropTypes.object,
+  performances:PropTypes.object,
+  score:PropTypes.object
 }

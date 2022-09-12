@@ -4,6 +4,12 @@ import VerticalNav from './components/VerticalNav/VerticalNav.js';
 import Main from './components/Main/Main.js';
 import axios from 'axios'
 import './App.css';
+import mainDatas from'./data/maindata.json'
+import activityDatas from './data/useractivities.json'
+import performanceDatas from './data/performances.json'
+import sessionDatas from './data/averagesessions.json'
+import PropTypes from 'prop-types'
+
 
 function App() {
   //reactte state yaratmak için fonksiyonel componentte
@@ -22,14 +28,22 @@ function App() {
 // Création d'une fonction avec comme paramètre userId que l'on a défini ns même
 const getUser = (userId) => {  
     // j'utilise la class "axios" avec la méthode get pour aller chercher les datas. entre parenthèses, je défini le path également spéficifier dans le backend ds le fichier "routes.js" J'ai juste modifié id dont j'ai défini en ligne 16.
-    axios.get(`/user/${userId}`)
-    // si la promesse est un succès (cad qu'elle a réussi a récupérer les données data)
-      .then(result => {
-        // on associe la promesse (=result.data.data) à la fonction setUserInfo qui a le paramètre du state "userInfo (ligne 11) " 
-        setUserInfo(result.data.data)
+  axios.get(`/user/${userId}`)
+  // si la promesse est un succès (cad qu'elle a réussi a récupérer les données data)
+    .then(result => {
+      console.log(result)
+      // on associe la promesse (=result.data.data) à la fonction setUserInfo qui a le paramètre du state "userInfo (ligne 11) " 
+      setUserInfo(result.data.data)
+  })
+  // si aucune réponse alors un message d'erreur en rouge apparaitra dans la console.
+    .catch(error =>{
+      console.error(error)
+      mainDatas.map(data => {
+        if(data.id === USER_ID){
+          setUserInfo(data)
+        }
+      })
     })
-    // si aucune réponse alors un message d'erreur en rouge apparaitra dans la console.
-      .catch(error => console.error(error))
 }
 
 
@@ -42,7 +56,16 @@ const getUserActivity = (user_id) => {
     .then(result => {
         setUserActivity(result.data.data.sessions)
     })
-    .catch(error => console.error(error))
+    .catch(error => {
+      console.error(error)
+      activityDatas.map(activity => {
+        if(activity.userId === USER_ID){
+          setUserActivity(activity.sessions)
+
+        }
+      })
+      
+    })
 }
 
 
@@ -56,7 +79,14 @@ const getUserSessions = (user_id) => {
   .then(result => {
     setUserSessions(result.data.data.sessions)
   })
-  .catch(error => console.error(error))
+  .catch(error => {
+    console.error(error)
+    sessionDatas.map(sessionData =>{
+      if (sessionData.userId === USER_ID){
+        setUserSessions(sessionData.sessions)
+      }
+    })
+  })
 }
 
 /**@function getUserPerformance 
@@ -68,7 +98,14 @@ const getUserPerformance = (user_id) => {
     .then(result => {
       setUserPerformance(result.data.data)
     })
-    .catch(error => console.error(error))
+    .catch(error => {
+      console.error(error)
+      performanceDatas.map(performanceData => {
+        if(performanceData.userId === USER_ID){
+          setUserPerformance(performanceData.data)
+        }
+      })
+    })
 }
  
   //useEffect metodu react elemanları componentleri yüklendikten hemen sonra çalışacak fonksiyonları çalıştırmak için kullanılır.
@@ -91,3 +128,14 @@ const getUserPerformance = (user_id) => {
 }
 
 export default App;
+
+App.propTypes = {
+
+  activityDataProp:PropTypes.object,
+  userInfoProp:PropTypes.object,
+  sessionsProp:PropTypes.object,
+  performanceProp:PropTypes.object,
+  todayScoreProp:PropTypes.object,
+  cardsProp:PropTypes.object
+  
+}

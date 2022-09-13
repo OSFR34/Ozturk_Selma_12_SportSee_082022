@@ -4,7 +4,7 @@ import {RadarChart,PolarGrid,PolarAngleAxis,Radar, PolarRadiusAxis} from 'rechar
 
 export default function RadarGraph(props) {
 
-  const gelenUserPerformancePropu = props.performances
+  const incomingUserPerformancePropu = props.performances
 
   const convertPerformanceKind = (performanceData) => {
     performanceData.data.map(value => {
@@ -32,7 +32,7 @@ export default function RadarGraph(props) {
   }
 
   if(props.performances){
-    convertPerformanceKind(gelenUserPerformancePropu)
+    convertPerformanceKind(incomingUserPerformancePropu)
   }
 
   
@@ -40,7 +40,7 @@ export default function RadarGraph(props) {
   return (
     <div className='radar-chart-parent'>
       {/* outerRadius=diamètre extérieur */}
-        <RadarChart outerRadius={90} width={258} height={318} data={gelenUserPerformancePropu.data}>
+        <RadarChart outerRadius={90} width={258} height={318} data={incomingUserPerformancePropu.data}>
           {/* PolarGrid=Grille polaire */}
             <PolarGrid />
             {/* PolarAngleAxis=Axe d'angle polaire */}
@@ -48,7 +48,7 @@ export default function RadarGraph(props) {
             {/* PolarRadiusAxis= Axe du rayon polaire*/}
             <PolarRadiusAxis angle={30} domain={[0, 240]} />
             {/* radar représente la partie en rouge  */}
-            <Radar name={gelenUserPerformancePropu.kind} dataKey='value' stroke="#ff0101" fill="#ff0101" fillOpacity={0.7} />
+            <Radar name={incomingUserPerformancePropu.kind} dataKey='value' stroke="#ff0101" fill="#ff0101" fillOpacity={0.7} />
         </RadarChart>
     </div>
   )

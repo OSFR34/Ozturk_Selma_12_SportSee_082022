@@ -3,11 +3,11 @@ import {BarChart,CartesianGrid,XAxis,YAxis,Tooltip,Legend,Bar} from 'recharts'
 import './barGraph.css'
 
 export default function BarGraph(props) {
-    const gelenUserActivityPropu = props.aktiviteProp;
+    const incomingUserActivityPropu = props.aktiviteProp;
   return (
     <div style={{ position:'relative' }} className="bar-graph-parent">
       <p className='activity-title'>Activité quotidienne</p>
-            <BarChart width={835} height={320}  data={gelenUserActivityPropu}>
+            <BarChart width={835} height={320}  data={incomingUserActivityPropu}>
                  {/*CartesianGrid =Grille cartésienne  */}
                 <CartesianGrid vertical={false} strokeDasharray="3 3"/> 
                    {/*XAxis= axe des abscisses  */}

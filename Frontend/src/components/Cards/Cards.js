@@ -6,7 +6,7 @@ import glucideIcon from '../../images/carbs-icon.svg'
 import lipidIcon from '../../images/fat-icon.svg'
 
 export default function Cards(props) {
-  const gelenUserCardsInfo = props.cards
+  const incomingUserCardsInfo = props.cards
   
   return (
     <div>
@@ -16,7 +16,7 @@ export default function Cards(props) {
             <div>
               <p style={{ fontSize:"20px",fontWeight:'700',marginLeft:'24px' }}>
                 {
-                  gelenUserCardsInfo ? gelenUserCardsInfo.calorieCount + 'kCal' :'-'
+                  incomingUserCardsInfo ? incomingUserCardsInfo.calorieCount + 'kCal' :'-'
                 }
               </p>
               <p style={{ fontSize:'14px',marginLeft:'24px',color:'#74798C',marginTop:'10px' }}>Calories</p>
@@ -29,7 +29,7 @@ export default function Cards(props) {
             <div>
               <p style={{ fontSize:"20px",fontWeight:'700',marginLeft:'24px' }}>
                 {
-                  gelenUserCardsInfo ? gelenUserCardsInfo.proteinCount + 'g' :'-'
+                  incomingUserCardsInfo ? incomingUserCardsInfo.proteinCount + 'g' :'-'
                 }
               </p>
               <p style={{ fontSize:'14px',marginLeft:'24px',color:'#74798C',marginTop:'10px' }}>Proteines</p>
@@ -42,7 +42,7 @@ export default function Cards(props) {
             <div>
               <p style={{ fontSize:"20px",fontWeight:'700',marginLeft:'24px' }}>
                 {
-                  gelenUserCardsInfo ? gelenUserCardsInfo.carbohydrateCount + 'g' :'-'
+                  incomingUserCardsInfo ? incomingUserCardsInfo.carbohydrateCount + 'g' :'-'
                 }
               </p>
               <p style={{ fontSize:'14px',marginLeft:'24px',color:'#74798C',marginTop:'10px' }}>Glucides</p>
@@ -55,7 +55,7 @@ export default function Cards(props) {
             <div>
               <p style={{ fontSize:"20px",fontWeight:'700',marginLeft:'24px' }}>
                 {
-                  gelenUserCardsInfo ? gelenUserCardsInfo.lipidCount + 'g' :'-'
+                  incomingUserCardsInfo ? incomingUserCardsInfo.lipidCount + 'g' :'-'
                 }
               </p>
               <p style={{ fontSize:'14px',marginLeft:'24px',color:'#74798C',marginTop:'10px' }}>Lipides</p>

@@ -6,7 +6,7 @@ import {LineChart,XAxis,Tooltip,Line} from 'recharts'
 
 export default function LineGraph(props) {
 
-  const gelenUserSessionsPropu = props.sessions;
+  const incomingUserSessionsPropu = props.sessions;
 
   /**@function reFormatSessionData
    * @param {array} sessionData
@@ -42,15 +42,15 @@ export default function LineGraph(props) {
   }
   
 
-// props.sessions ? reFormatSessionData(gelenUserSessionsPropu):null;
+// props.sessions ? reFormatSessionData(incomingUserSessionsPropu):null;
  if(props.sessions){
-  reFormatSessionData(gelenUserSessionsPropu)
+  reFormatSessionData(incomingUserSessionsPropu)
  }
 
   return (
     <div style= {{ marginTop:"30px" }} className="line-parent">
       <p className='line-chart-title'>Durée moyenne des sessions</p>
-        <LineChart width={258} height={263} data={gelenUserSessionsPropu} >
+        <LineChart width={258} height={263} data={incomingUserSessionsPropu} >
               {/* axe des abscisses(x) */}
               <XAxis dataKey="day" axisLine = {{ stroke:"white" }} stroke="white" style={{ opacity:'0.5',fontWeight:'bold' }} />
               {/* Tooltip=info bulle */}

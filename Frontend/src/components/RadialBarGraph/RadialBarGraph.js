@@ -4,11 +4,11 @@ import './radialBar.css'
 
 export default function RadialBarGraph(props) {
 
-  const gelenUserScorePropu = props.score
+  const incomingUserScorePropu = props.score
   const data = [
     {
       "name": "",
-      "uv": gelenUserScorePropu.todayScore * 100,
+      "uv": incomingUserScorePropu.todayScore * 100,
       "pv": 2400,
       "fill": "#ff0000",
     },
@@ -58,7 +58,7 @@ export default function RadialBarGraph(props) {
       <p className='radial-description'>
         <div>
           {
-            gelenUserScorePropu.todayScore * 100 + ' %'
+            incomingUserScorePropu.todayScore * 100 + ' %'
           }
         </div>
         <span className='description-text'>

@@ -25,17 +25,14 @@ function App() {
 * @param {number} userId - User's id number
 *@return {void} - Nothing
  */
-// Création d'une fonction avec comme paramètre userId que l'on a défini ns même
+
 const getUser = (userId) => {  
-    // j'utilise la class "axios" avec la méthode get pour aller chercher les datas. entre parenthèses, je défini le path également spéficifier dans le backend ds le fichier "routes.js" J'ai juste modifié id dont j'ai défini en ligne 16.
+   
   axios.get(`/user/${userId}`)
-  // si la promesse est un succès (cad qu'elle a réussi a récupérer les données data)
     .then(result => {
       console.log(result)
-      // on associe la promesse (=result.data.data) à la fonction setUserInfo qui a le paramètre du state "userInfo (ligne 11) " 
       setUserInfo(result.data.data)
   })
-  // si aucune réponse alors un message d'erreur en rouge apparaitra dans la console.
     .catch(error =>{
       console.error(error)
       mainDatas.map(data => {
@@ -108,7 +105,7 @@ const getUserPerformance = (user_id) => {
     })
 }
  
-  //useEffect metodu react elemanları componentleri yüklendikten hemen sonra çalışacak fonksiyonları çalıştırmak için kullanılır.
+  //la méthode useEffect fonctionnera toutes les fonctions,tout juste après le téléchargement des composants react .
   useEffect(() => {
     getUser(USER_ID)
     getUserActivity(USER_ID)

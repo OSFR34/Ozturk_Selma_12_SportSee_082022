@@ -105,7 +105,7 @@ const getUserPerformance = (user_id) => {
     })
 }
  
-  //la méthode useEffect fonctionnera toutes les fonctions,tout juste après le téléchargement des composants react .
+  //la méthode useEffect lancera sur toutes les fonctions,tout juste après le téléchargement des composants react .
   useEffect(() => {
     getUser(USER_ID)
     getUserActivity(USER_ID)

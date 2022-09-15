@@ -11,9 +11,9 @@ import sessionDatas from './data/averagesessions.json'
 import PropTypes from 'prop-types'
 
 
+
 function App() {
-  //reactte state yaratmak için fonksiyonel componentte
-  //setUserInfo state i değiştirmek için kullancağımız fonksiyon
+
   const [userInfo,setUserInfo] = useState(false)
   const [userActivity,setUserActivity] = useState(false)
   const [userSesions,setUserSessions] = useState(false)
